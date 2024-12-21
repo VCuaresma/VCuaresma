@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Navidad 2024</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #003366, #0066cc);
+            color: white;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            border: 2px solid white;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #ffdf00;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            opacity: 0.8;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .footer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>¡Feliz Navidad 2024! 🎄</h1>
+            <p>Querido amig@,</p>
+            <p>
+                En esta época mágica del año, quiero tomarme un momento para enviarte mis mejores deseos. La Navidad no es solo un día, sino un sentimiento de gratitud, alegría y amor. Es el tiempo perfecto para reflexionar sobre todo lo que hemos logrado y los momentos
+                que hemos compartido con nuestros seres queridos.
+            </p>
+            <p>
+                Este 2024 ha sido un año de desafíos y aprendizajes, pero también de grandes logros y momentos especiales. Agradezco cada instante en el que pude contar contigo, y espero que tú también hayas encontrado razones para sonreír.
+            </p>
+            <p>
+                Mi deseo para ti es que esta Navidad esté llena de abrazos cálidos, risas sinceras y recuerdos inolvidables. Que la magia de estas fechas ilumine tu hogar y que el amor de tus seres queridos te envuelva.
+            </p>
+            <p>
+                Que el Año Nuevo que se aproxima esté lleno de oportunidades, éxitos y felicidad. Y sobre todo, que nunca falten las esperanzas renovadas para construir un futuro brillante.
+            </p>
+            <p>
+                ¡Feliz Navidad y próspero Año Nuevo! 🎅✨
+            </p>
+            <p>Con cariño,</p>
+            <p><strong>Byte Bloom Club</strong></p>
+        </div>
+        <div class="footer">© 2024 - Con amor y gratitud</div>
+    </div>
+
+    <script>
+        // Genera los copos de nieve
+        function createSnowflakes() {
+            const snowflake = document.createElement('div');
+            const size = Math.random() * 5 + 5; // Tamaño aleatorio
+            const duration = Math.random() * 5 + 5; // Duración aleatoria
+            const position = Math.random() * 100; // Posición horizontal aleatoria
+
+            snowflake.classList.add('snowflake');
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${position}vw`;
+            snowflake.style.animationDuration = `${duration}s`;
+
+            document.body.appendChild(snowflake);
+
+            // Elimina el copo después de caer
+            setTimeout(() => snowflake.remove(), duration * 1000);
+        }
+
+        // Crear copos de nieve continuamente
+        setInterval(createSnowflakes, 200);
+    </script>
+</body>
+
+</html>
